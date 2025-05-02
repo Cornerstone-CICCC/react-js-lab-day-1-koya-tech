@@ -93,7 +93,7 @@ const App: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="container mx-auto p-4">
             <UserForm
                 formData={formData}
                 setFormData={setFormData}

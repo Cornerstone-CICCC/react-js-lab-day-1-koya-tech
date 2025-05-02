@@ -14,32 +14,35 @@ interface UserProfileProps {
 
 const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
     if (!user) {
-        return <p>No user selected.</p>;
+        return <p className="text-gray-500 italic">No user selected.</p>;
     }
 
     return (
-        <div>
-            <h2>User Profile</h2>
+        <div className="bg-white p-6 rounded shadow-md space-y-4">
+            <h2 className="text-xl font-bold">User Profile</h2>
             <p>
-                <strong>ID:</strong> {user.id}
+                <strong className="font-medium">ID:</strong> {user.id}
             </p>
             <p>
-                <strong>Full Name:</strong> {user.fullname}
+                <strong className="font-medium">Full Name:</strong>{" "}
+                {user.fullname}
             </p>
             <p>
-                <strong>Age:</strong> {user.age}
+                <strong className="font-medium">Age:</strong> {user.age}
             </p>
             <p>
-                <strong>Education:</strong> {user.education}
+                <strong className="font-medium">Education:</strong>{" "}
+                {user.education}
             </p>
             <p>
-                <strong>Gender:</strong> {user.gender}
+                <strong className="font-medium">Gender:</strong> {user.gender}
             </p>
             <p>
-                <strong>Skills:</strong> {user.skills.join(", ")}
+                <strong className="font-medium">Skills:</strong>{" "}
+                {user.skills.join(", ")}
             </p>
             <p>
-                <strong>Bio:</strong> {user.bio}
+                <strong className="font-medium">Bio:</strong> {user.bio}
             </p>
         </div>
     );
